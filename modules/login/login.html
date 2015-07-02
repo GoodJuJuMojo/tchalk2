@@ -1,0 +1,21 @@
+﻿<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<form name="form" ng-submit="login()" role="form">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username"  ng-model="username" required />
+        <span ng-show="form.username.$dirty && form.username.$error.required">Username is required</span>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password"  ng-model="password" required />
+        <span ng-show="form.password.$dirty && form.password.$error.required">Password is required</span>
+    </div>
+    <div>
+        <label for="userid">User ID</label>
+        <input type="userid" name="userid" id="userid"  ng-model="userid" required />
+        <span ng-show="form.userid.$dirty && form.userid.$error.required">User ID  is required</span>
+    </div>
+    <div class="form-actions">
+        <button type="submit" ng-xxdisabled="form.$invalid || dataLoading">Login</button>        
+    </div>
+</form>
